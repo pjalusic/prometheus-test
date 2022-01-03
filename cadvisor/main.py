@@ -1,7 +1,6 @@
-import multiprocessing
-
 import logging
 import random
+import threading
 import time
 from prometheus_client import Summary
 from prometheus_client.exposition import start_http_server
@@ -17,21 +16,20 @@ HEAVY_REQUEST_TIME = Summary('request_heavy_processing_seconds', 'Time spent pro
 @REQUEST_TIME.time()
 def process_request():
     res = 1 << int(random.random() * 1000000)
-    logging.info(f'Res is {len(str(res))} characters long')
+    logging.info(f'Res1 is {len(str(res))} characters long')
 
 
 def some_random_stats():
     # Generate some requests.
     while True:
         process_request()
-
         time.sleep(random.random())
 
 
 @HEAVY_REQUEST_TIME.time()
 def generate_heavy_load():
     res = 2 ** int(random.random() * 3000000)
-    logging.info(f'Res is {len(str(res))} characters long')
+    logging.info(f'Res2 is {len(str(res))} characters long')
 
 
 def some_other_random_stats():
@@ -48,8 +46,8 @@ if __name__ == '__main__':
     start_http_server(8000)
 
     threads = [
-        multiprocessing.Process(target=some_random_stats),
-        multiprocessing.Process(target=some_other_random_stats),
+        threading.Thread(target=some_random_stats),
+        threading.Thread(target=some_other_random_stats),
     ]
     [t.start() for t in threads]
     [t.join() for t in threads]

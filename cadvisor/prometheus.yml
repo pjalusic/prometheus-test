@@ -4,9 +4,11 @@ global:
 scrape_configs:
 
     - job_name: 'my_process'
-      scrape_interval: 10ms
+      scrape_interval: 1s
       static_configs:
-          - targets: ['my_metrics:8000']
+        - targets:
+          - host.docker.internal:8000
+          - workload:8000
 
     - job_name: 'cadvisor'
       scrape_interval: 5s
