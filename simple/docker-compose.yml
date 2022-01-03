@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+
+  my_service:
+    image: prometheus-test
+    build: .
+    volumes:
+      - /sys/fs/cgroup/memory/docker:/docker/memory
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8000:8000
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
