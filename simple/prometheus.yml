@@ -9,4 +9,4 @@ scrape_configs:
     - job_name: my_metrics
       scrape_interval: 1s
       static_configs:
-          - targets: ['localhost:8000']
+          - targets: ['worker:8000']

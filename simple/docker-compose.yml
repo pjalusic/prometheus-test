@@ -4,6 +4,7 @@ services:
 
   my_service:
     image: prometheus-test
+    container_name: worker
     build: .
     volumes:
       - /sys/fs/cgroup/memory/docker:/docker/memory
