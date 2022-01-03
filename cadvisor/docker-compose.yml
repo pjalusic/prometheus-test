@@ -9,27 +9,32 @@ services:
     command:
       - --config.file=/etc/prometheus/prometheus.yml
     volumes:
+      - prom-volume:/prometheus
       - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
     ports:
       - 9090:9090
-#    depends_on:
-#      - cadvisor
+    depends_on:
+      - cadvisor
 
-#  cadvisor:
-#    image: gcr.io/cadvisor/cadvisor
-#    container_name: cadvisor
-#    ports:
-#      - 8080:8080
-#    volumes:
-#      - /:/rootfs:ro
-#      - /var/run:/var/run:rw
-#      - /sys:/sys:ro
-#      - /var/lib/docker/:/var/lib/docker:ro
-#    depends_on:
-#      - workload
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor
+    container_name: cadvisor
+    ports:
+      - 8080:8080
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    depends_on:
+      - workload
 
   my_service:
     image: workload-simulator
+    build: .
     container_name: workload
     ports:
       - 8000:8000
+
+volumes:
+    prom-volume:
