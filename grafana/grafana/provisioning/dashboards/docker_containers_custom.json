@@ -23,8 +23,8 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 13112,
   "graphTooltip": 1,
-  "id": 3,
-  "iteration": 1641382391635,
+  "id": 6,
+  "iteration": 1641393270138,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -60,7 +60,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 12,
         "w": 6,
         "x": 0,
         "y": 1
@@ -116,7 +116,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 12,
         "w": 6,
         "x": 6,
         "y": 1
@@ -172,7 +172,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 12,
         "w": 6,
         "x": 12,
         "y": 1
@@ -228,7 +228,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 12,
         "w": 6,
         "x": 18,
         "y": 1
@@ -321,7 +321,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 5
+        "y": 13
       },
       "id": 10,
       "links": [],
@@ -408,7 +408,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 5
+        "y": 13
       },
       "id": 1,
       "links": [],
@@ -496,7 +496,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 12
+        "y": 20
       },
       "id": 54,
       "links": [],
@@ -583,7 +583,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 12
+        "y": 20
       },
       "id": 34,
       "links": [],
@@ -670,7 +670,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 19
+        "y": 27
       },
       "id": 9,
       "links": [],
@@ -765,7 +765,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 19
+        "y": 27
       },
       "id": 8,
       "links": [],
@@ -807,7 +807,8 @@
   "schemaVersion": 34,
   "style": "dark",
   "tags": [
-    "container", "docker"
+    "container",
+    "docker"
   ],
   "templating": {
     "list": [
@@ -908,6 +909,7 @@
           }
         ],
         "query": "30s,1m,2m,3m,5m,7m,10m,30m,1h,6h,12h,1d,7d,14d,30d",
+        "queryValue": "",
         "refresh": 2,
         "skipUrlSync": false,
         "type": "interval"
@@ -947,6 +949,6 @@
   "timezone": "browser",
   "title": "Docker Containers custom",
   "uid": "containers2",
-  "version": 4,
+  "version": 2,
   "weekStart": ""
 }
