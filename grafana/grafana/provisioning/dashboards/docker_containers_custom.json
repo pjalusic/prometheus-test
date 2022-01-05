@@ -23,8 +23,8 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 13112,
   "graphTooltip": 1,
-  "id": 6,
-  "iteration": 1641393270138,
+  "id": 2,
+  "iteration": 1641399626538,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -88,7 +88,7 @@
           "hide": false,
           "instant": false,
           "interval": "",
-          "intervalFactor": 2,
+          "intervalFactor": 1,
           "legendFormat": "{{name}}",
           "refId": "A",
           "step": 240
@@ -144,7 +144,7 @@
           "hide": false,
           "instant": false,
           "interval": "",
-          "intervalFactor": 2,
+          "intervalFactor": 1,
           "legendFormat": "{{name}}",
           "refId": "A",
           "step": 240
@@ -343,7 +343,7 @@
           "expr": "sum(container_memory_usage_bytes{name=~\".+\"}) by (name)",
           "hide": false,
           "interval": "",
-          "intervalFactor": 2,
+          "intervalFactor": 1,
           "legendFormat": "{{name}}",
           "refId": "A",
           "step": 240
@@ -430,7 +430,7 @@
           "expr": "sum(rate(container_cpu_usage_seconds_total{name=~\".+\"}[$interval])) by (name) * 100",
           "hide": false,
           "interval": "",
-          "intervalFactor": 2,
+          "intervalFactor": 1,
           "legendFormat": "{{name}}",
           "metric": "",
           "refId": "F",

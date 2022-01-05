@@ -19,12 +19,13 @@
       }
     ]
   },
+  "description": "Docker host metrics",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "gnetId": 1860,
   "graphTooltip": 0,
-  "id": 1,
-  "iteration": 1641382915828,
+  "id": 4,
+  "iteration": 1641401341979,
   "links": [
     {
       "icon": "external link",
@@ -13069,15 +13070,16 @@
   "schemaVersion": 34,
   "style": "dark",
   "tags": [
-    "linux", "system"
+    "linux",
+    "system"
   ],
   "templating": {
     "list": [
       {
         "current": {
           "selected": false,
-          "text": "node",
-          "value": "node"
+          "text": "nodeexporter",
+          "value": "nodeexporter"
         },
         "datasource": "Prometheus",
         "definition": "",
@@ -13181,8 +13183,7 @@
   },
   "timezone": "browser",
   "title": "Docker Host Full",
-  "description": "Docker host metrics",
   "uid": "host2",
-  "version": 3,
+  "version": 1,
   "weekStart": ""
 }
