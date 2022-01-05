@@ -60,10 +60,30 @@ services:
 
   work_stress1:
     image: progrium/stress
-    container_name: dejan
-    command: [--cpu, '4', --io, '4', --vm, '4', --vm-bytes, '128M', --timeout, '90s']
+    container_name: stress-cpu
+    command: [--cpu, '1', --timeout, '240s', --backoff, '10000000', --quiet]
 
   work_stress2:
     image: progrium/stress
-    container_name: dejan2
-    command: [--cpu, '1', --io, '1', --vm, '1', --timeout, '180s']
+    container_name: stress-io
+    command: [--io, '1', --timeout, '180s', --backoff, '3000000', --quiet]
+
+  work_stress3:
+    image: progrium/stress
+    container_name: stress-mem1
+    command: [--vm, '1', --vm-bytes, '128M', --timeout, '180s', --backoff, '1000000', --quiet]
+
+  work_stress4:
+    image: progrium/stress
+    container_name: stress-mem2
+    command: [--vm, '2', --timeout, '120s', --backoff, '8000000', --quiet]
+
+  work_stress5:
+    image: progrium/stress
+    container_name: stress-disk1
+    command: [--hdd, '1', --timeout, '90s', --backoff, '4000000', --quiet]
+
+  work_stress6:
+    image: progrium/stress
+    container_name: stress-disk2
+    command: [--hdd, '2', --hdd-bytes, '256M', --timeout, '180s', --backoff, '12000000', --quiet]
