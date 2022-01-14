@@ -11,7 +11,7 @@ from utils import process_request
 logger = logging.getLogger(__name__)
 
 
-csv_file = 'database/results.csv'
+csv_file = 'results.csv'
 CSV_FIELDNAMES = ['datetime', 'result']
 
 

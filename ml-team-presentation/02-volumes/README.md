@@ -7,11 +7,11 @@ docker build -t test-volumes .
 
 # Run
 ```
-docker run --rm -it -v $(pwd):/ --entrypoint bash test-volumes
+docker run --rm -it -p 8000:8000 -v $(pwd):/app test-volumes
 ```
 
-## Fix
+# Check folder structure
 
 ```
-docker run --rm -it -p 8000:8000 -v $(pwd):/ --entrypoint bash test-volumes
+docker run --rm -it -p 8000:8000 -v $(pwd):/app --entrypoint bash test-volumes
 ```
