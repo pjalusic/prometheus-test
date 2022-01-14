@@ -1,3 +1,4 @@
+# Requirements
 - Install VSCode
 - Install extensions:
   - Docker
@@ -5,16 +6,18 @@
     
 ![img.png](img.png)
 
-# Connect to container graphically
+# Exercise
 
-## Forward port
+## Connect to container graphically
+
+### Forward port
 ```
 ssh -NL 3000:localhost:3000 <user>@<ip>
 ```
 
-## Open browser on [localhost:3000](http://localhost:3000/)
+### Open browser on [localhost:3000](http://localhost:3000/)
 
-# Now connect to container in terminal
+## Connect to container in terminal
 
 ![img_1.png](img_1.png)  
 (it will automatically fetch all hosts from default `~/.ssh/config`)
