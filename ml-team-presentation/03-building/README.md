@@ -75,3 +75,7 @@ docker container exec -it test-production bash
 ```
 docker system df -a
 ```
+
+## Docker Desktop for Mac
+- container view, manage and monitor
+- check images and volumes
